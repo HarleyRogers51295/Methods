@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using System.Xml.Serialization;
 
 namespace MethodsWithLoopsAndConditionalsConsole._1
@@ -8,9 +9,184 @@ namespace MethodsWithLoopsAndConditionalsConsole._1
     {
         static void Main(string[] args)
         {
+            //Overloading Exersise
+            Console.Write("Enter your number: ");
+            int num4 = int.Parse(Console.ReadLine());
+            Console.Write("Enter your second number: ");
+            int num5 = int.Parse(Console.ReadLine());
+            Console.WriteLine(Add(num4, num5));
+
+            Console.Write("Enter your number with decimals: ");
+            double num6 = double.Parse(Console.ReadLine());
+            Console.Write("Enter your second number with decimals: ");
+            double num7 = double.Parse(Console.ReadLine());
+            Console.WriteLine(Add(num6, num7));
+
+
+            Console.Write("enter your number: ");
+            int num3 = int.Parse(Console.ReadLine());
+            Console.Write("enter your second number: ");
+            int num2 = int.Parse(Console.ReadLine());
+            Console.Write("Do you want an answer? Write true or false: ");
+            bool isTrue =bool.Parse(Console.ReadLine());
+            Console.WriteLine(Add(num3, num2, isTrue));
+
+            PauseConsole();
+            //examples of overlaoding
+            var numberFromMethod = Same(1, 15.0);//using double
+            var numberFromMethod1 = Same(1, 15, 13);//using the three one
+            var numberFromMethod2 = Same(1, 15);//using the two one
+            Console.WriteLine(numberFromMethod);
+            Console.WriteLine(numberFromMethod1);
+            Console.WriteLine(numberFromMethod2);
+
+            PauseConsole();
+            //write for loop 15 times.
+            for(int a = 0; a < 1; a++)
+            {
+                Console.WriteLine($"{a}");
+            }
+            for (int b = 0; b < 2; b++)
+            {
+                Console.WriteLine($"{b}");
+            }
+            for(int c =0; c < 3; c++)
+            {
+                Console.WriteLine($"{c}");
+            }
+            for(int s = 0; s < 4; s++)
+            {
+                Console.WriteLine($"{s}");
+            }
+            for(int e = 0; e < 5; e++)
+            {
+                Console.WriteLine($"{e}");
+            }
+            for(int f = 0; f < 6; f++)
+            {
+                Console.WriteLine($"{f}");
+            }
+            for(int g = 0; g < 7; g++)
+            {
+                Console.WriteLine($"{g}");
+            }
+            for(int h = 0; h < 8; h++)
+            {
+                Console.WriteLine($"{h}");
+            }
+            for(int i = 0; i < 9; i++)
+            {
+                Console.WriteLine($"Your numbers are{i}.");
+            }
+            for(int l = 0; l < 10; l++)
+            {
+                Console.WriteLine($"{l}");
+            }
+            for(int m = 0; m < 11; m++)
+            {
+                Console.WriteLine($"{m}");
+            }
+            for(int n = 0; n < 12; n++)
+            {
+                Console.WriteLine($"{n}");
+            }
+            for(int o = 0; o < 13; o++)
+            {
+                Console.WriteLine($"{o}");
+            }
+            for(int p = 0; p < 14; p++)
+            {
+                Console.WriteLine($"{p}");
+            }
+            for(int q = 0; q < 15; q++)
+            {
+                Console.WriteLine($"{q}, this is the last for loop");
+            }
+            PauseConsole();
+            int r = 0;
+            while(r < 1){
+                r++;
+                Console.WriteLine($"{r}, this is the first while loop");
+            }
+            int t = 0;
+            while(t < 2)
+            {
+                t++;
+                Console.WriteLine($"{t}");
+            }
+            int u = 0;
+            while(u < 3)
+            {
+                u++;
+                Console.WriteLine($"{u}");
+            }
+            int v = 0;
+            while (v < 4)
+            {
+                v++;
+                Console.WriteLine($"{v}");
+            }
+            int w = 0;
+            while (w < 5)
+            {
+                w++;
+                Console.WriteLine($"{w}");
+            }
+            int x = 0;
+            while(x < 6)
+            {
+                x++;
+                Console.WriteLine($"{x}");
+            }
+            int y = 0;
+            while(y < 7)
+            {
+                y++;
+                Console.WriteLine($"{y}");
+            }
+            int z = 0;
+            while(z < 8)
+            {
+                z++;
+                Console.WriteLine($"{z}, This is the last while loop.");
+            }
+            PauseConsole();
+            int aa = 0;
+            do
+            {
+                aa++;
+                Console.WriteLine($"{aa}, this is the begening of the do-while's");
+            } while (aa < 5);
+            int ab = 0;
+            do
+            {
+                ab++;
+                Console.WriteLine($"{ab}");
+            } while (ab < 5);
+            int ac = 0;
+            do
+            {
+                ac++;
+                Console.WriteLine($"{ac}");
+            } while (ac < 5);
+            PauseConsole();
+            int[] numbers1 = { 1, 2, 3, 4, 5, 6 };
+            foreach(int number in numbers1)
+            {
+                Console.WriteLine($"{number}, this is the beginning of the foreach loops");
+            }
+            List<int> newList = new List<int>() { 2, 3, 4, 5 };//this is wrong btw!(fix after lists lessons!
+            foreach(int number in newList)//this is wrong btw!
+            {
+                Console.WriteLine($"{newList}");
+            }
+
+
+
+            PauseConsole();
             //This is a giant list of Methods!
 
-            NumberList1();//Method 1
+           NumberList1();//Method 1
 
             PauseConsole();
 
@@ -25,13 +201,13 @@ namespace MethodsWithLoopsAndConditionalsConsole._1
 
             PauseConsole();
 
-            Console.WriteLine("Write your number belowe");//Method 4
+            Console.WriteLine("Write your number below");//Method 4
             var num1 = int.Parse(Console.ReadLine());
             EvenOrOdd(num1);
 
             PauseConsole();
 
-            Console.WriteLine("Write your number belowe");//Method 5
+            Console.WriteLine("Write your number below");//Method 5
             var d = int.Parse(Console.ReadLine());
             PosOrNeg(d);
 
@@ -75,7 +251,7 @@ namespace MethodsWithLoopsAndConditionalsConsole._1
             int userNumber3 = GetUserNUmber();//Method 11
             CubeOfNum(userNumber3);
 
-        }//the Methods start here!
+        }//the Methods start here! (1-6)
         private static int GetUserNUmber()
         {
             Console.Write("Give me a number: ");
@@ -88,6 +264,7 @@ namespace MethodsWithLoopsAndConditionalsConsole._1
             Console.WriteLine(" ");
             Console.ReadLine();
         }//PauseConsole
+        
         private static void NumberList1()//Method 1 (number 1000 to -1000)
         {
             int goal = -1000;
@@ -166,6 +343,8 @@ namespace MethodsWithLoopsAndConditionalsConsole._1
                 Console.WriteLine("You can not vote!");
             }
         }
+        
+        //More difficult method exersises.(7-11)
         private static void TenToTen(int userNumber) //Method 7  (range of numbers)
         {
             if (userNumber >= -10 && userNumber <= 10) //shows that number is between 10 and -10
@@ -226,11 +405,59 @@ namespace MethodsWithLoopsAndConditionalsConsole._1
                 Console.WriteLine($"Number is {i} and the cube of {i} is: {cubed}"); //could dp i*i*i
             }
         }
-
         
+        
+        //Overloading Examples
+        private static int Same(int a, int b)//example of overlaoding
+        {
+            return a + b;
+        }
+        private static double Same(double a, double b) // you have to change all the data types to overload.
+        {
+            return a + b;
+        }
+        /*private static double Same(int a, int b)//this would not work.
+        {
+            return a + b;
+        }*/
+        private static int Same(int a, int b, int c)//adding the c makes it vallid. 
+        {
+            return a + b + c;
+        }
+        // end of the example of overlaoding.
+
+       
+       //overloading Exersise. 
+        private static int Add(int a, int b)
+        {
+            return a + b;
+        }
+        private static double Add(double a, double b)
+        {
+            return a + b;
+        }
+        private static string Add(int a, int b, bool isTrue)//to do bools and ints use a string!
+        {
 
 
+            if (isTrue == true)
+            {
+                int answer = a + b;
+                if (answer > 1)
+                {
+                    return $"{answer} dollars!";
 
+                }
+                else
+                {
+                    return $"{answer} dollar!";
+                }
+            }
+            else
+            {
+                return "No Answer";
+            }
 
+        }
     }
 }
