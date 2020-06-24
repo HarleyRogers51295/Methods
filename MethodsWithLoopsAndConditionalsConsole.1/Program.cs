@@ -9,7 +9,7 @@ namespace MethodsWithLoopsAndConditionalsConsole._1
         static void Main(string[] args)
         {
             //This is a giant list of Methods!
-            
+
             NumberList1();//Method 1
 
             PauseConsole();
@@ -25,13 +25,13 @@ namespace MethodsWithLoopsAndConditionalsConsole._1
 
             PauseConsole();
 
-            Console.WriteLine("Write your number below");//Method 4
+            Console.WriteLine("Write your number belowe");//Method 4
             var num1 = int.Parse(Console.ReadLine());
             EvenOrOdd(num1);
 
             PauseConsole();
 
-            Console.WriteLine("Write your number below");//Method 5
+            Console.WriteLine("Write your number belowe");//Method 5
             var d = int.Parse(Console.ReadLine());
             PosOrNeg(d);
 
@@ -59,7 +59,7 @@ namespace MethodsWithLoopsAndConditionalsConsole._1
             PauseConsole();
 
             int userNumber1 = GetUserNUmber(); //Method 9
-            int[] randoNumbers = ArrayReturn(userNumber1);
+            int[] randoNumbers = ArrayReturn(userNumber1);//could use var instead of int[]
             foreach (var number in randoNumbers)
             {
                 Console.WriteLine(number);
@@ -75,7 +75,7 @@ namespace MethodsWithLoopsAndConditionalsConsole._1
             int userNumber3 = GetUserNUmber();//Method 11
             CubeOfNum(userNumber3);
 
-        }
+        }//the Methods start here!
         private static int GetUserNUmber()
         {
             Console.Write("Give me a number: ");
@@ -188,12 +188,22 @@ namespace MethodsWithLoopsAndConditionalsConsole._1
         }
         private static int[] ArrayReturn(int userNumber) //Method 9 (random number array)
         {
+            //create an array
             int[] randos = new int[userNumber];
+            //create a random object
             Random rng = new Random();
+            //loop through our array
             for (int i = 0; i < randos.Length; i++)
             {
+               //assign each index a random int value
                 randos[i] = rng.Next(501);
             }
+
+            int randoNum = rng.Next(randos.Length + 1);//to select a random number the array
+            Console.WriteLine($"your damage delt is {randos[randoNum]}");
+
+            
+            //return the array
             return randos;
         }
         private static int SumOfArray(int[] randoNumbers) //Method 10
