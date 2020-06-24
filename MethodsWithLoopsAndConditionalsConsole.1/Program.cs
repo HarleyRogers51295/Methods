@@ -8,7 +8,8 @@ namespace MethodsWithLoopsAndConditionalsConsole._1
     {
         static void Main(string[] args)
         {
-
+            //This is a giant list of Methods!
+            
             NumberList1();//Method 1
 
             PauseConsole();
